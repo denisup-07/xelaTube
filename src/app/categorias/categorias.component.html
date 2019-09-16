@@ -1,0 +1,33 @@
+
+<br><br>
+<h3 id="title">{{genre}}</h3>
+<p id="scroll" style="color: black">>>>>>>>>>></p>
+
+
+<!--
+<div class="container-fluid">
+<div class="card-collumns row animated fadeIn" style="width: 130%;">
+    <div (click)="verPelicula(movie)" *ngFor="let movie of movies" class="col-3 mx-4 card puntero my-3">
+      <img class="card-img-top" [src]="movie | peliculaImagen" alt="Card image cap" height="450" />
+      <div class="card-body">
+        <h5 class="card-title">{{movie.title}}</h5>
+        
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+
+
+
+    <div class="row">
+        <div class="card my-3 mx-4 puntero" style="width: 18rem; " *ngFor="let movie of movies" (click)="verPelicula(movie)">
+            <img [src]="movie | peliculaImagen" class="card-img-top" alt="..." id="similar">
+            <div class="card-body">
+                <h5 class="card-title">{{movie.title}} </h5>
+            
+            </div>
+        </div>
+
+  </div>

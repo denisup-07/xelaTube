@@ -1,0 +1,26 @@
+@font-face{
+    src:url("../assets/fonts/zuka.ttf");
+    font-family: "nikolas";
+}
+
+nav{
+    background-color: rgb(209, 47, 47);
+    
+}
+a{
+    font-size: 18px;
+}
+#title{
+    font-size: 40px;
+    font-family: "nikolas";
+}
+
+@media(max-width: 400px){
+
+    ngb-carousel{
+        display: none;
+    }
+   .picsum-img-wrapper{
+       display: none;
+   }
+}

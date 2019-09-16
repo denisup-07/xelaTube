@@ -5,11 +5,12 @@
       type="text"
       (keyup)="buscar(termino.value)"
       class="form-control"
-      placeholder="Buscar Pelicula"
+      placeholder="Buscar filme"
+      style="width:1250px;font-size:25px;margin-left: 200px;margin-top: 50px;"
     />
   </div>
 </div>
 
-<app-loading class="m-5" *ngIf="loading"></app-loading>
+<app-loading class="m-5" *ngIf="loading" ></app-loading>
 
-<app-tarjetas *ngIf="!loading" [items]="peliculas"></app-tarjetas>
+<app-tarjetas *ngIf="!loading" [items]="peliculas" ></app-tarjetas>

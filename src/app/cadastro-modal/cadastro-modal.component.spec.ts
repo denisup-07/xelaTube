@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TarjetasComponent } from './tarjetas.component';
+import { CadastroModalComponent } from './cadastro-modal.component';
 
-describe('TarjetasComponent', () => {
-  let component: TarjetasComponent;
-  let fixture: ComponentFixture<TarjetasComponent>;
+describe('CadastroModalComponent', () => {
+  let component: CadastroModalComponent;
+  let fixture: ComponentFixture<CadastroModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TarjetasComponent ]
+      declarations: [ CadastroModalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TarjetasComponent);
+    fixture = TestBed.createComponent(CadastroModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

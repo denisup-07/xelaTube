@@ -1,0 +1,89 @@
+<br><br><br>
+<!--
+    <ul class="nav " style="width: 100%" style="margin-top:-80px;">
+            <li class="nav-item" >
+                  <a class="nav-link " href="#" style="color: white;">Populares</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#"  style="color: white;" [routerLink]="peliculaInfantil"> Ação</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#"  style="color: white;">Aventura</a>
+            </li>
+             <li class="nav-item">
+                  <a class="nav-link" href="#"  style="color: white;" >Animação</a>
+            </li>
+             <li class="nav-item">
+                  <a class="nav-link" href="#"  style="color: white;" >Comédia</a>
+            </li>
+             <li class="nav-item">
+                  <a class="nav-link" href="#"  style="color: white;" >Crime</a>  
+            </li>
+             <li class="nav-item">
+                  <a class="nav-link" href="#"  style="color: white;" >Documentário</a>
+             </li>
+     </ul>
+-->
+
+<ul class="list-group">
+    <div class="dropdown"> 
+  
+    </div>
+    
+    <li class="list-group-item" style="border-radius: 15px;"><img src="../../../assets/img/search.png"  routerLink="../search" class="btn-search puntero"></li>
+   
+  </ul>
+     
+  <!--DROPDOWN-->
+ 
+              
+
+        <br><br>
+
+<br><br>
+
+  
+  <div class="container-fluid">
+
+    <!--CATEGORIAS-->
+
+   
+<!--POPULARES-->
+
+
+
+  <div class="row">
+      <div class="card my-3 mx-4 puntero" style="width: 18rem; " *ngFor="let item of items" (click)="verPelicula(item)">
+          <img [src]="item | peliculaImagen" class="card-img-top" alt="..." id="similar">
+          <div class="card-body">
+              <h5 class="card-title">{{item.title}} </h5>
+          
+          </div>
+      </div>
+  </div>
+
+<!--
+    <div class="card-collumns row animated fadeIn" style="width: 1800px;margin-left: -350px;">
+      <div (click)="verPelicula(item)" *ngFor="let item of items" class="col-3 mx-4 card puntero my-3" >
+        <img class="card-img-top" [src]="item | peliculaImagen" alt="Card image cap"  style="width: 60%"/>
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">
+            <span *ngFor="let pelicula of item.peliculas" class="badge badge-pill badge-primary">
+              {{ pelicula.name }}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+<br><br><br>
+
+ 
+
+
+
+<br><br>
+    
+ 

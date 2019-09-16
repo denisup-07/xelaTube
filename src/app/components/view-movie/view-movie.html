@@ -1,0 +1,120 @@
+        <app-loading *ngIf="loadingPelicula"></app-loading>
+
+<div id="top" style="color:black;">>>>>>>>>>>>></div><br><br><br><br><br><br><br><br><br>
+
+    <div class="container main-container animated fadeIn fast" [@moveIn]='state' id="top">
+            <img src="../../../assets/img/small_left_red-512.png" width="60" [routerLink]="['/'+regresarA, busqueda ]"
+                class="back puntero" id="scroll">
+
+            <br> <br> <br>
+         
+            <div class="row">
+                 <div class="col-md-5" >
+                      <img [src]="pelicula | peliculaImagen" [alt]="pelicula.original_title" class="img-thumbnail " autofocus>
+                </div>
+
+                <!--INFORMAÇÕES FILME-->
+                <div class="col-md-7">
+                    <h3 style="background-color: rgb(218, 13, 23);padding: 15px;border-radius: 15px;" id="sip">Sipnose </h3>
+                    <hr>
+                        <img src="../../../assets/img/aumentar.png" width="50" style="padding-right:10px;" id="aumentar" (click)="aumentar()">
+                  
+                        <img src="../../../assets/img/restaurar.png" width="40" style="padding-right:10px " id="restaurar"  (click)="restaurar()">
+                    <span class="badge badge-red" style="background-color: rgb(207, 38, 38);"> <img src="../../../assets/img/contrast.png"  width="40" style="padding-right:10px " id="restaurar"  (click)="constraste()"></span>
+             <br><br>
+                    <h4>Filme: <b>{{pelicula.title}}</b></h4>
+                        <p>{{pelicula.tagline}}</p>
+
+                            <p class="text-justify" id="sipnose">
+                                    {{ pelicula.overview }}
+                            </p>
+
+                    <div class="info" id="infor">
+                            <p> Popularidade: <span class="badge badge-primary">{{ pelicula.popularity | number:".0-0" }}/10</span>
+                                <br>
+                                Pontuação do Usuário: <span class="badge badge-primary">{{ pelicula.vote_average }}</span>
+                            </p>
+                                <p><b>Duração:</b><span class="badge badge-dark"> {{pelicula.runtime}} min</span></p>
+                                     <p><b>Data de produção:</b><span class="badge badge-dark"> {{pelicula.release_date}}</span></p>
+                                          <p>Receita: <span class="badge badge-dark"> {{pelicula.revenue | number:"000.000"}}.00</span>
+                    </div>
+
+                 
+                            <div class="list-group" id="list-tab" role="tablist" style="margin-left: 750px;margin-right:-500px;margin-top:-500px;">
+                                 <h3 style="background-color: rgb(207, 63, 38);padding: 15px;border-radius:15px" id="moreInfo">Mais sobre o filme:</h3>
+                                      <a class="list-group-item list-group-item-action"  style="color: black;margin-top: -10px;"> <p><b>Título original:</b> {{pelicula.original_title}}</p> </a>
+                                         <a class="list-group-item list-group-item-action"  style="color: black;margin-top: -10px;">   <p><b>Língua original:</b><span class="badge badge-primary"> {{pelicula.original_language}}</span></p> </a>
+                                </div>
+                   
+
+
+                            <div class="list-group" id="list-tab" role="tablist"
+                                style="margin-left: 750px;margin-right:-500px;margin-top:100px;">
+                                <h3 style="background-color: rgb(207, 63, 38);padding: 15px;border-radius:15px" id="category">Categoria:</h3>
+                                <a class="list-group-item list-group-item-action" *ngFor="let genre of genres"
+                                    style="color: black;margin-top: -10px;" routerLink="/category" [queryParams]="{id_genre: genre.id, nameGenre: genre.name}">{{genre.name}} </a>
+                            </div>
+                        </div>
+
+
+            </div>
+
+
+        </div>
+
+        <br><br><br><br>        <br><br><br><br>
+
+
+            <div class="autores" >
+                <h3 style="background-color: rgb(207, 63, 38);padding: 15px;border-radius: 15px;margin-right:10%;margin-top:150px;margin-left:30%;text-align: center" id="atores">
+                    Atores</h3><br><br>
+
+
+                    <ngb-carousel *ngIf="images" interval="2000" style="margin-left: 30%">
+                        <ng-template ngbSlide *ngFor="let credit of credits" >
+                          <div class="picsum-img-wrapper">
+                            <img [src]="credit | peliculaImagen" alt="Random first slide" style="width: 50%;border-radius: 40px " height="500" id="pAtor">
+                          </div>
+                          <div class="carousel-caption" style="margin-left: 50%;margin-bottom: 20%">
+                            <h3>{{credit.name}}</h3>
+                            <p>{{credit.character}}</p>
+                          </div>
+                        </ng-template>
+                        
+                      </ngb-carousel>
+
+
+
+                    <!--TABLE ACTORS
+                    <table class="table table-bordered" style="background-color: white;color:black" id="table">
+                        <thead >
+                           <tr>
+                             <th scope="col"><h4>Atores</h4></th>
+                              <th scope="col"><h4>Personagem</h4></th> 
+                          </tr>
+                        </thead>
+                             <tbody *ngFor="let credit of credits">
+                                <tr>
+                                   <th scope="row">{{credit.name}}</th>
+                                     <td>{{credit.character}}</td>
+                                 </tr>
+                            </tbody>
+                         </table>
+                     </div>-->
+
+            <br><br>
+
+            <!--CARD SIMILARES-->
+            <div class="similares">
+                <h3 style="background-color: rgb(207, 63, 38);padding: 15px;border-radius: 15px;margin-right:250px;text-align: center" id="similares">Filmes
+                    similares</h3><br><br>
+                <div class="row">
+                    <div class="card my-3 mx-4 puntero" style="width: 18rem; " *ngFor="let similar of similares" (click)="verPelicula(similar)">
+                        <img [src]="similar | peliculaImagen" class="card-img-top" alt="..." id="similar">
+                        <div class="card-body">
+                            <h5 class="card-title">{{similar.title}} </h5>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>

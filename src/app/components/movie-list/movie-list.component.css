@@ -1,0 +1,84 @@
+@font-face{
+    src: url("../../../assets/fonts/Roboto-Regular.ttf");
+    font-family: "caviar";
+}
+.container-fluid{
+
+    margin-left: 30%;
+      
+}
+
+.card{
+    transition: .5s all;
+   
+    
+}
+
+.card:hover{
+    transition: .5s all;
+    transform: scale(0.9);
+  
+}
+h3{
+    font-size: 45px;
+    margin-left: 400px;
+    padding: 20px;
+    padding-left: 380px;
+    border-radius: 35px;
+    width: 100%;
+    background-color: rgb(209, 47, 47);
+    
+}
+.nav{
+    margin-left: 300px;
+    margin-right: -500px;
+}
+.nav-item{
+    
+    border: 1px solid white;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    transition: .5s all;
+}
+.nav-item:hover{
+    background-color: rgb(209, 47, 47);
+ 
+    transform: scale(1.1);
+    transition: .5s all;
+}
+.btn-search{
+    width: 50px;
+    transition: .5s all;
+}
+.btn-movie{
+    width: 50px;
+    transition: .5s all;
+ 
+}
+.btn-movie:hover{
+    transform: scale(1.3);
+    transition: .5s all;
+}
+.btn-search:hover{
+    transform: scale(1.3);
+    transition: .5s all;
+}
+.list-group{
+    margin-right: 1015px;
+    margin-top: -50px;
+    
+}
+
+@media(max-width:400px){
+    .list-group{
+        margin-left: -50px;
+        margin-right: 300px;
+    }
+    .btn-movie{
+        width: 50px;
+    }
+    .container-fluid{
+        margin-left: 0px;
+    }
+}
