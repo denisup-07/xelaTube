@@ -20,6 +20,8 @@ import { CadastroModalComponent } from './cadastro-modal/cadastro-modal.componen
 import { CategoriasComponent } from './categorias/categorias.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
+import { SlideComponent } from './slide/slide.component';
 
 
 
@@ -36,6 +38,8 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
     LoginModalComponent,
     CadastroModalComponent,
     CategoriasComponent,
+    FooterComponent,
+    SlideComponent,
     
   ],
  

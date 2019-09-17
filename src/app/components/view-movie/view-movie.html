@@ -66,11 +66,11 @@
 
 
             <div class="autores" >
-                <h3 style="background-color: rgb(207, 63, 38);padding: 15px;border-radius: 15px;margin-right:10%;margin-top:150px;margin-left:30%;text-align: center" id="atores">
+                <h3 style="background-color: rgb(207, 63, 38);padding: 15px;border-radius: 15px;margin-right:10%;margin-top:150px;margin-left:10%;text-align: center" id="atores">
                     Atores</h3><br><br>
 
 
-                    <ngb-carousel *ngIf="images" interval="2000" style="margin-left: 30%">
+                    <ngb-carousel *ngIf="images" interval="2000" style="margin-left: 10%">
                         <ng-template ngbSlide *ngFor="let credit of credits" >
                           <div class="picsum-img-wrapper">
                             <img [src]="credit | peliculaImagen" alt="Random first slide" style="width: 50%;border-radius: 40px " height="500" id="pAtor">

@@ -9,6 +9,8 @@ import { LoginModalComponent } from 'src/app/login-modal/login-modal.component';
 })
 export class NavbarComponent implements OnInit {
 
+  images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+
   constructor() { }
 
 

@@ -1,0 +1,42 @@
+
+                          <ngb-carousel *ngIf="images"  #carousel interval="1000" id="topo">
+                                <ng-template ngbSlide id="collapseExample" [ngbCollapse]="isCollapsed">
+                                   <div class="picsum-img-wrapper">
+                                      <img src="../assets/img/vingadores.jpg" alt="Random first slide" style="width: 100%;" height="800">
+                                        </div>
+                                          <div class="carousel-caption">
+                                    </div>
+                                 </ng-template>
+                                    <ng-template ngbSlide>
+                                       <div class="picsum-img-wrapper">
+                                           <img src="../assets/img/Rei-Leão.jpg" alt="Random second slide" style="width: 100%;" height="800">
+                                       </div>
+                                     <div class="carousel-caption"> 
+                                  </div>
+                                </ng-template>
+                                <ng-template ngbSlide>
+                                  <div class="picsum-img-wrapper" style="height: 800px;">
+                                    <img src="../assets/img/it.jpg" alt="Random third slide" style="width: 100%;height: 100%;" height="800">
+                                  </div>
+                                  <div class="carousel-caption">
+                                   
+                                  </div>
+                                </ng-template>
+                                <ng-template ngbSlide>
+                                    <div class="picsum-img-wrapper" style="height:800px;">
+                                      <img src="../assets/img/yesterday.jpg" alt="Random third slide" style="height:800px;width:100%">
+                                    </div>
+                                    <div class="carousel-caption">
+                                     
+                                    </div>
+                                  </ng-template>
+                                  <ng-template ngbSlide>
+                                      <div class="picsum-img-wrapper">
+                                        <img src="../assets/img/velozes.jpg" alt="Random third slide" style="width: 100%;" height="800">
+                                      </div>
+                                      <div class="carousel-caption">
+                                       
+                                      </div>
+                                    </ng-template>
+                          
+                              </ngb-carousel>

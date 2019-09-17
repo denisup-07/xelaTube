@@ -27,7 +27,7 @@ export class MoviedbService {
   }
 
   //query movie url
-  getQueryforPelicula(query: string) {
+  getQueryforMovie(query: string) {
     const url = `https://api.themoviedb.org/3${query}?api_key=${
     this.apikey
       }&language=pt-BR&callback=JSONP_CALLBACK`;
@@ -63,7 +63,7 @@ export class MoviedbService {
 
   //to get movie with id
   getMovie(id: string) {
-    return this.getQueryforPelicula(`/movie/${id}`).pipe(
+    return this.getQueryforMovie(`/movie/${id}`).pipe(
       map((data: any) => data)
     );
   
@@ -71,26 +71,26 @@ export class MoviedbService {
 
   //process...
  getVideos(id: string) {
-    return this.getQueryforPelicula(`/movie/${id}/videos`).pipe(
+    return this.getQueryforMovie(`/movie/${id}/videos`).pipe(
       map((data: any) => data)
     );
  }
 
   //to get similar movies of the movie selected
  getSimilares(id: string){
-   return this.getQueryforPelicula(`/movie/${id}/similar`).pipe(
+   return this.getQueryforMovie(`/movie/${id}/similar`).pipe(
       map((data: any) => data)
     );
  }
  //to get credits of the movie selected
  getCredits(id: string){
-   return this.getQueryforPelicula(`/movie/${id}/credits`).pipe(
+   return this.getQueryforMovie(`/movie/${id}/credits`).pipe(
       map((data: any) => data)
    );
  }
  //process... 
  getReviews(id: string){
-   return this.getQueryforPelicula(`/movie/${id}/reviews`).pipe(
+   return this.getQueryforMovie(`/movie/${id}/reviews`).pipe(
       map((data: any) => data)
    );
  }
